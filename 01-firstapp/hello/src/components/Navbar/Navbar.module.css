@@ -1,0 +1,18 @@
+.nav {
+  grid-area: n;
+  background-color: #C2E4FF;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 12px;
+}
+
+
+.item {
+  color: #585A5B;
+  font-weight: bold;
+}
+
+/* .item.active {
+  color: rebeccapurple;
+  font-weight: bold;
+} */

@@ -1,0 +1,18 @@
+
+
+.header {
+    grid-area: h;
+    background-color: #C2E4FF;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding-left: 8px;
+    padding-top: 3px;
+    padding-bottom: 9px;
+    
+    
+  }
+  
+   .header img {
+    width: 60px;
+  } 
+  

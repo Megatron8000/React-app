@@ -1,0 +1,14 @@
+ .card {
+    width: 600px;
+    position: relative; left: 220px; bottom: 120px;
+    background-color: lightcyan;
+    border-radius: 25px 25px 0 25px;
+    color: #3B3C3D;
+    padding-left: 14px;
+    padding-top: 3px;
+    padding-bottom: 6px;
+} 
+
+.info {
+    margin-bottom: -10px;
+}

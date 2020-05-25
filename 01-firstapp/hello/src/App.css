@@ -2,44 +2,14 @@
   margin: 0 auto;
   display: grid;
   width: 1200px;
-  
+
 
   grid-template-areas:
-  "h h h h"
-  "n c c c"; 
+    "h h h h"
+    "n c c c";
   grid-template-rows: 70px 4fr;
-  grid-template-columns: 1fr 3fr; 
+  grid-template-columns: 1fr 3fr;
   grid-gap: 2px;
-  
-
-}
-
-.header {
-  grid-area: h;
-  background-color: lightblue;
-  border-radius: 5px;
-  
-}
-
- .header img {
-  width: 60px;
-} 
-
-.nav {
-  grid-area: n;
-  background-color: lightblue;
-  border-radius: 5px;
-}
 
 
-.content {
-  grid-area: c;
-  background-color: lightblue;
-  border-radius: 5px;
-}
-
-.content img {
-  height: 300px;
-  width: 900px;
-  border-radius: 5px;
 }
