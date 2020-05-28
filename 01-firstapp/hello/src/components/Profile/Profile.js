@@ -6,7 +6,7 @@ import Avatar from './UserInfo/Avatar';
 import Description from './UserInfo/Description';
 
 const Profile = () => {
-  return <div className={classes.content}>
+  return <div>
     <img src={banner} alt='banner' className={classes.banner} />
     <div>
       <Avatar />

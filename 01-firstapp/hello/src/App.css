@@ -10,6 +10,11 @@
   grid-template-rows: 70px 4fr;
   grid-template-columns: 1fr 3fr;
   grid-gap: 2px;
+}
 
 
+.app-wrapper-content {
+  grid-area: c;
+  background-color: #C2E4FF;
+  border-radius: 5px;
 }
