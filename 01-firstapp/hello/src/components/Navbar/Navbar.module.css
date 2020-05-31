@@ -7,12 +7,15 @@
 }
 
 
-.item {
+.item a{
   color: #585A5B;
   font-weight: bold;
+  text-decoration: none;
 }
 
-/* .item.active {
-  color: rebeccapurple;
+.item a.active {
+  background: aliceblue;
+  border-radius: 4px; 
+  color: #585A5B;
   font-weight: bold;
-} */
+} 
