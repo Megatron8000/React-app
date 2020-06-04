@@ -1,14 +1,21 @@
  .card {
-    width: 600px;
-    position: relative; left: 220px; bottom: 120px;
+    float: right;
+    width: 500px;
     background-color: lightcyan;
-    border-radius: 25px 25px 0 25px;
+    border-radius: 25px 25px 25px 25px;
     color: #3B3C3D;
-    padding-left: 14px;
-    padding-top: 3px;
-    padding-bottom: 6px;
-} 
+    display: block;
+    margin-right: 14px;
+    margin-bottom: 30px;
+    margin-top: 11px;
+    padding-top: 12px;
+ }
 
 .info {
+    padding-left: 10px;
     margin-bottom: -10px;
+}
+
+.data {
+    padding-left: 10px;
 }

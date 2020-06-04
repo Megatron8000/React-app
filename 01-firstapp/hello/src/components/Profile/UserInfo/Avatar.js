@@ -1,5 +1,5 @@
 import React from 'react';
-import ava from './ava.png';
+import ava from './ava.jpg';
 import classes from './Avatar.module.css';
 
 const Avatar = () => {

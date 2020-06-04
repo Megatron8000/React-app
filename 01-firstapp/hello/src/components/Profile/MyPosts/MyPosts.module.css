@@ -1,4 +1,5 @@
 .posts {
+    float: left;
     width: 600px;
-    padding-left: 120px;
+    padding-left: 12px;
 }

@@ -1,13 +1,14 @@
 .container {
   width: 110px;
   padding-left: 52px;
-  padding-top: 12px;
+  padding-top: 26px;
+  float: left;
 }
 
 .avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    border: 3px solid #5316E0; 
-    box-shadow: 0 0 7px #666; 
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    border: 2px solid #5316E0; 
+    box-shadow: 0 0 3px #666; 
   } 
