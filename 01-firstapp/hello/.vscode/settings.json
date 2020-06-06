@@ -1,4 +1,8 @@
 {
     "python.pythonPath": "C:\\Users\\baryk\\AppData\\Local\\Programs\\Python\\Python38-32\\",
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "cSpell.words": [
+        "Palo",
+        "Testov"
+    ]
 }

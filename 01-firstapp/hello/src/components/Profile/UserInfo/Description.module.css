@@ -1,21 +1,21 @@
- .card {
-    float: right;
-    width: 500px;
+  .card {
+    float: left;
+    width: 336px;
     background-color: lightcyan;
     border-radius: 25px 25px 25px 25px;
-    color: #3B3C3D;
+    color: #000000;
     display: block;
-    margin-right: 14px;
+    margin-left: 36px;
     margin-bottom: 30px;
-    margin-top: 11px;
+    margin-top: 130px;
     padding-top: 12px;
+    padding-left: 32px;
+    padding-bottom: 4px;
  }
 
 .info {
-    padding-left: 10px;
-    margin-bottom: -10px;
-}
-
-.data {
-    padding-left: 10px;
+    font-size: 18px;
+    padding-left: 15px;
+    font-weight: 600;
+  
 }

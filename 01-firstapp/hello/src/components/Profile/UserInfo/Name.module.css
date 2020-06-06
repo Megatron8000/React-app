@@ -1,0 +1,15 @@
+.userName {
+position: absolute;
+width: fit-content;
+height: 42px;
+left: 785px;
+top: 459px;
+
+
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 42px;
+
+color: #3B3C3D;
+}

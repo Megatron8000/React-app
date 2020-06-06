@@ -5,7 +5,7 @@ import ava from './ava.png'
 const Post = (props) => {
   return <div>
     <div className={classes.item}>
-    <img src={ava} alt='ava' />
+      <img src={ava} alt='ava' />
       {props.message} <br />
       {props.likes}
       <div>
@@ -13,7 +13,7 @@ const Post = (props) => {
           Like!
         </button>
       </div>
-</div>  
+    </div>
   </div>
 }
 

@@ -1,14 +1,21 @@
 import React from 'react';
 import classes from './Description.module.css';
+import Name from './Name';
+import Card from './Card';
+
+
+
 
 const Description = () => {
-    return <div className={classes.card}>
-        <h3 className={classes.info}> Name: </h3> 
-        <p className={classes.data}> Jack Jones</p> 
-        <h3 className={classes.info}> Age: </h3>
-        <p className={classes.data}> 32 </p>
-        <h3 className={classes.info}> Interests: </h3> 
-        <p className={classes.data}> Web dev, Music, Travelling </p>
+    return <div>
+        <Name value='User Testov' />
+           
+        <div className={classes.card}>
+            <div className={classes.info}> Works as a <Card position='front-end developer'  organization= 'Pied Piper'/> </div> 
+            <div className={classes.info}> Studied at <Card organization= 'Harvard University'/> </div> 
+            <div className={classes.info}> Lives in <Card location= 'Palo Alto'/>  </div> 
+            <div className={classes.info}> Married to <Card subject= 'Beautiful Wife'/> </div> 
+        </div>
     </div>
 }
 
