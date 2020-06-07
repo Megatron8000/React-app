@@ -1,41 +1,48 @@
 import React from 'react';
 import classes from './Dialogs.module.css';
 import friend from './friend.jpg'
+import { NavLink } from 'react-router-dom';
+// import Avatar from '../Profile/UserInfo/Avatar';
+
+
+const DialogItem = (props) => {
+    let url = '/dialogs/' + props.id
+
+    return <div className={classes.dialog + ' ' + classes.active}>
+        <img src={friend} alt='friendAva' />
+        <NavLink to={url}>{props.name}</NavLink>
+    </div>
+}
+
+const Message = (props) => {
+        return <div className={classes.message}>{props.message}</div>
+}
+
+const Answer = (props) => {
+        return <div className={classes.answer}>{props.answer}</div>
+}
+
+
 
 const Dialogs = () => {
     return (
         <div className={classes.dialogs}>
             <div className={classes.dialogsItems}>
-                <div className={classes.dialog + ' ' + classes.active}>
-                    <img src={friend} alt='friendAva' />
-                    Jack
-                </div>
+                <DialogItem name='Peter' id='1' />
                 <hr />
-                <div className={classes.dialog}>
-                <img src={friend} alt='friendAva' />
-                    James
-                </div>
+                <DialogItem name='Lois' id='2' />
                 <hr />
-                <div className={classes.dialog}>
-                <img src={friend} alt='friendAva' />
-                    Jill
-                </div>
+                <DialogItem name='Chris' id='3' />
                 <hr />
-                <div className={classes.dialog}>
-                <img src={friend} alt='friendAva' />
-                    Jack
-                </div>
+                <DialogItem name='Meg' id='4' />
                 <hr />
-                <div className={classes.dialog}>
-                <img src={friend} alt='friendAva' />
-                    Joel
-                </div>
+                <DialogItem name='Brian' id='5' />
             </div>
             <div className={classes.messages}>
-                <div className={classes.message}>Hello World!</div>
-                <div className={classes.message}>React is Awesome!</div>
-                <div className={classes.message}>Think different</div>
-                <div className={classes.answer}>Thank you</div> 
+                <Message message='Hello World!' />
+                <Message message='React is Awesome!' />
+                <Message message='Think different' />
+                <Answer answer='Thank you!' />
             </div>
         </div>
     )
