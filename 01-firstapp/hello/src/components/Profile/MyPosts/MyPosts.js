@@ -10,6 +10,9 @@ const MyPosts = () => {
     { id: 2, post: 'React is awesome!', likes: 26}
   ]
 
+  let postElements = postData
+      .map ( post => <Post message={post.post} likes={post.likes} id={post.id} />)  
+
   return <div className={classes.wrapper}>
     <img src={ava} alt='ava' />
     <div className={classes.posts}>
@@ -19,10 +22,11 @@ const MyPosts = () => {
       </div>
       <br /><br /><br />
       <div className={classes.tape}>
-        <Post message={postData[0].post} likes={postData[0].likes} />
-        <Post message={postData[1].post} likes={postData[1].likes} />
+        {postElements}
 
 
+        {/* <Post message={postData[0].post} likes={postData[0].likes} />
+        <Post message={postData[1].post} likes={postData[1].likes} /> */}
         {/* <Post message='Hello world' likes='15' />
         <Post message='React is awesome!' likes='20' /> */}
       </div>
