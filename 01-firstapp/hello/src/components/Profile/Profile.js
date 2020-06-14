@@ -5,14 +5,15 @@ import MyPosts from './MyPosts/MyPosts';
 import Avatar from './UserInfo/Avatar';
 import Description from './UserInfo/Description';
 
-const Profile = () => {
+const Profile = (props) => {
+
   return <div>
     <img src={banner} alt='banner' className={classes.banner} />
     <div>
       <Avatar />
       <Description />
     </div>
-    <MyPosts />
+    <MyPosts postData= {props.postData} />
   </div>
 }
 
