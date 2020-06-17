@@ -19,8 +19,12 @@ const App = (props) => {
         <Header />
         <Navbar />
         <div className='app-wrapper-content'>
-          <Route path='/profile' render={ () => <Profile postData={props.postData}/> } />
-          <Route path='/dialogs' render={ () => <Dialogs  dialogsData={props.dialogsData} messagesData={props.messagesData}  answersData={props.answersData} /> } />
+          <Route path='/profile' render={ () => <Profile 
+                  postData={props.state.profilePage.postData}/> } />
+          <Route path='/dialogs' render={ () => <Dialogs  
+                 dialogsData={props.state.dialogsPage.dialogsData} 
+                 messagesData={props.state.dialogsPage.messagesData} 
+                 answersData={props.state.dialogsPage.answersData} /> } />
           <Route path='/news' render= { () => <News /> } />
           <Route path='/music' render= { () => <Music /> } />
           <Route path='/settings' render= { () => <Settings /> } />
@@ -30,4 +34,4 @@ const App = (props) => {
   );
 }
 
-export default App;
+export default App
