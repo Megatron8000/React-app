@@ -22,12 +22,13 @@
     border: 2px solid #FFFFFF;
 }
 
-.dialogsItems .active {
+/* .dialogsItems .active {
     background:  #1956F1;
     color: aliceblue;
     font-weight: 600;
     border-radius: 9px ;
-}
+    не включать, пока не разберусь, как выделять только активынй элемент
+} */
 
  .messages {
     padding-top: 14px ;
