@@ -20,20 +20,23 @@ const Navbar = () => {
       <NavLink to='/settings' activeClassName={classes.active}>Settings</NavLink>
     </div>
     <br />
-    <div>
+    {/* <div>
       Friend List
       <div>
         <div>
+        <img src={} alt='friendAva' />
           Peter
         </div>
         <div>
+        <img src={} alt='friendAva' />
           Lois
         </div>
         <div>
+        <img src={} alt='friendAva' />
           Brian
         </div>
       </div>
-    </div>
+    </div> */}
   </nav>
 }
 
