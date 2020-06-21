@@ -1,0 +1,16 @@
+.container {
+    
+    background: #E0F2FF;
+    width: 282px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 7px;
+    padding-top: 36px;
+    border-radius: 25px;
+  }
+  
+  .subtitle {
+    font-weight: 700;
+    font-size: 18px;
+    color: #585A5B;
+  }
