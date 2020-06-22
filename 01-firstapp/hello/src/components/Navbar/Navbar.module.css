@@ -17,7 +17,7 @@
 }
 
 .item a.active {
-  background: aliceblue;
+  background: #fff;
   padding: 2px;
   border-radius: 4px; 
   color: #585A5B;
@@ -26,10 +26,10 @@
 
 .container {
   background: #E0F2FF;
-  width: 182px;
+  width: 282px;
   height: 150px;
   margin-top: 20px;
-  margin-left: 57px;
+  margin-left: 7px;
   padding-top: 36px;
   border-radius: 25px;
 }
