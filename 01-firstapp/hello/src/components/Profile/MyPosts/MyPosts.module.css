@@ -47,3 +47,10 @@ textarea {
     left: 70px;
     z-index: 999;
 }
+
+.postsHeader {
+    font-size: 32px;
+    font-weight: 600;
+    color: #3B3C3D;
+    padding-left: 130px;
+}

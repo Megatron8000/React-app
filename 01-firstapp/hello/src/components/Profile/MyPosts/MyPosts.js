@@ -17,6 +17,7 @@ const MyPosts = (props) => {
       </div>
       <br /><br /><br />
       <div className={classes.tape}>
+        <div className={classes.postsHeader}> My posts</div>
         {postElements}
       </div>
     </div>
