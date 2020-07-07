@@ -8,12 +8,17 @@ const MyPosts = (props) => {
   let postElements = 
         props.postData.map ( post => <Post message={post.post} likes={post.likes} id={post.id} />)  
 
+  let  newPostElement = React.createRef() //создает ссылку на объект
+
+  let addPost = () => { let text= newPostElement.current.value; alert(text)} 
+  // создает функцию, которая выводит в алерт текущее значение из текстэреа
+
   return <div className={classes.wrapper}>
     <img src={ava} alt='ava' />
     <div className={classes.posts}>
-      <textarea rows='5' cols='35'></textarea>
+      <textarea ref={newPostElement} rows='5' cols='35'></textarea>
       <div>
-        <button className={classes.button}>Post</button>
+        <button onClick= {addPost} className={classes.button}>Post</button> 
       </div>
       <br /><br /><br />
       <div className={classes.tape}>
