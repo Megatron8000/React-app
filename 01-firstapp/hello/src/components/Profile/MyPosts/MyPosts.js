@@ -16,7 +16,7 @@ const MyPosts = (props) => {
   return <div className={classes.wrapper}>
     <img src={ava} alt='ava' />
     <div className={classes.posts}>
-      <textarea ref={newPostElement} rows='5' cols='35'></textarea>
+      <textarea ref={newPostElement} rows='5' cols='35' className={classes.newPostEnter}></textarea>
       <div>
         <button onClick= {addPost} className={classes.button}>Post</button> 
       </div>

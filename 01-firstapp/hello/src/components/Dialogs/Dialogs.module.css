@@ -1,12 +1,14 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 2fr 10fr 10fr;
+    grid-template-rows: auto;
 }
 
 .dialogsItems {
     padding: 10px;
     background-color: #D0EAFF;
     border-radius: 6px;
+    width: 200px;
 
 }
 
@@ -61,3 +63,14 @@
 hr {
     color: #000;
 }
+
+/* .answerContainer {
+    float: right;
+} */
+
+.answerEnterArea {
+  
+    border-radius: 25px;
+    border: none;
+}
+

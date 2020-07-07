@@ -27,12 +27,12 @@
 
 
 
-textarea {
+.newPostEnter {
     display: block;
     position: relative;
     left: 90px;
     top: 10px;
-    border-radius: 25px;
+    border-radius: 15px;
     border: none;
 }
 
