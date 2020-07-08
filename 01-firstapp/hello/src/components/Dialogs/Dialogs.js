@@ -16,10 +16,10 @@ const Dialogs = (props) => {
 
     let answerElements =
         props.answersData.map(answer => <Answer answer={answer.answer} id={answer.id} />)
-    
+
     let addNewAnswer = React.createRef()
-    
-    let addAnswer = () => { let answer = addNewAnswer.current.value; alert(answer)}    
+
+    let addAnswer = () => { let answer = addNewAnswer.current.value; alert(answer) }
 
     return (
         <div className={classes.dialogs}>
@@ -29,12 +29,12 @@ const Dialogs = (props) => {
             <div className={classes.messages}>
                 {messagesElements}
                 {answerElements}
-            </div>
-            <div className={classes.answerContainer}>
-                <textarea ref={addNewAnswer} className={classes.answerEnterArea}></textarea>
-            </div>
-            <div>
-                <button onClick={addAnswer} className={classes.button}>Post</button>
+                <div className={classes.answerContainer}>
+                    <textarea ref={addNewAnswer} className={classes.answerEnterArea}></textarea>
+                </div>
+                <div>
+                    <button onClick={addAnswer} className={classes.button}>Send!</button>
+                </div>
             </div>
         </div>
     )

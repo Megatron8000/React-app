@@ -1,14 +1,13 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 10fr 10fr;
-    grid-template-rows: auto;
+    grid-template-columns: 2fr 10fr;
 }
 
 .dialogsItems {
     padding: 10px;
     background-color: #D0EAFF;
     border-radius: 6px;
-    width: 200px;
+   
 
 }
 
@@ -69,8 +68,22 @@ hr {
 } */
 
 .answerEnterArea {
-  
-    border-radius: 25px;
+    width: 716px;
+    height: 167px;
+    border-radius: 15px;
     border: none;
 }
 
+.button {
+    float: right;
+    margin-right: 18px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color: #1956F1;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 18px;
+    padding: 10px;
+}
