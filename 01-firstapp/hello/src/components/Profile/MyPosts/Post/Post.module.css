@@ -1,12 +1,20 @@
 .item {
   font-weight: 500;
   color: #585A5B;
+  background: #F6FDFF;
+  width: 370px;
+  margin-left: 9px;
+  margin-bottom: 9px;
   padding-left: 12px;
+  padding-top: 8px;
+  border-radius: 18px;
 }
 
 
 .item img {
-  position: static;
+  position: relative; 
+  left: -4px;
+  top: 9px;
   width: 30px;
   height: 30px;
   border-radius: 100px;
