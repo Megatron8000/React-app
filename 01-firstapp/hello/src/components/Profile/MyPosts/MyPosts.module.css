@@ -48,6 +48,12 @@
     z-index: 999;
 }
 
+.tape {
+    background: #E0F2FF;
+    border-radius: 17px;
+}
+
+
 .postsHeader {
     font-size: 32px;
     font-weight: 600;

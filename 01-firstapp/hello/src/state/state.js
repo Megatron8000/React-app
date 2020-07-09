@@ -36,7 +36,6 @@ let state = {
     
         answersData: [
             { id: 1, answer: 'Thank You!' },
-            { id: 2, answer: 'I want a hotdog!' }
         ]
 
     },

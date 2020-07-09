@@ -16,7 +16,6 @@
 }
 
 .dialog img {
-    
     width: 30px;
     height: 30px;
     border-radius: 100px;
@@ -63,9 +62,6 @@ hr {
     color: #000;
 }
 
-/* .answerContainer {
-    float: right;
-} */
 
 .answerEnterArea {
     width: 716px;
