@@ -12,6 +12,7 @@ import { Route, BrowserRouter } from 'react-router-dom';
 
 
 
+
 const App = (props) => {
 
   return (
@@ -21,7 +22,9 @@ const App = (props) => {
         <Navbar avatars={props.state.avatars} />
         <div className='app-wrapper-content'>
           <Route path='/profile' render={() => <Profile
-            postData={props.state.profilePage.postData} />} />
+            postData={props.state.profilePage.postData}
+            addPost={props.addPost}
+             />} />
           <Route path='/dialogs' render={() => <Dialogs
             dialogsData={props.state.dialogsPage.dialogsData}
             messagesData={props.state.dialogsPage.messagesData}

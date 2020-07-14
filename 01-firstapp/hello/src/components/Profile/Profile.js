@@ -13,7 +13,7 @@ const Profile = (props) => {
       <Avatar />
       <Description />
     </div>
-    <MyPosts postData= {props.postData} />
+    <MyPosts postData= {props.postData}  addPost= {props.addPost} />
   </div>
 }
 

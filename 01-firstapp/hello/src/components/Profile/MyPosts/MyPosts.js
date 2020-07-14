@@ -10,7 +10,7 @@ const MyPosts = (props) => {
 
   let  newPostElement = React.createRef() //создает ссылку на объект
 
-  let addPost = () => { let text= newPostElement.current.value; alert(text)} 
+  let addPost = () => { let text= newPostElement.current.value; props.addPost(text)} 
   // создает функцию, которая выводит в алерт текущее значение из текстэреа
 
   return <div className={classes.wrapper}>
