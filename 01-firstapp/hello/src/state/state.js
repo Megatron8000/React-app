@@ -2,6 +2,7 @@ import React from 'react';
 import Quagmire from './Quagmire.jpg'
 import Brian from './Brian.jpg'
 import Peter from './Peter.jpeg'
+import { rerenderEntireTree } from '../render'
 
 
 
@@ -65,6 +66,7 @@ export let addPost = (postMessage) => {
         likes: 0
     }
     state.profilePage.postData.push(newPost)
+    rerenderEntireTree(state)
 }
 
 export default state
