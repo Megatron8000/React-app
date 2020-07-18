@@ -6,7 +6,6 @@ import { rerenderEntireTree } from '../render'
 
 
 
-
 //черновик под фотки
 
 const brian  = <img src={Brian} alt='Brian' />
@@ -46,10 +45,11 @@ let state = {
         postData: [
             { id: 1, post: 'Hello World!', likes: 66 },
             { id: 2, post: 'React is awesome!', likes: 26 }
-        ]
+        ],
+
+        newPostText: 'What on your mind?'
 
     },
-
    
     avatars: [
         {id: 1, value: brian},
@@ -66,6 +66,11 @@ export let addPost = (postMessage) => {
         likes: 0
     }
     state.profilePage.postData.push(newPost)
+    rerenderEntireTree(state)
+}
+
+export let updatePostText = (newText) => {
+    state.profilePage.newPostText = newText
     rerenderEntireTree(state)
 }
 

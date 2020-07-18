@@ -8,19 +8,31 @@ const MyPosts = (props) => {
   let postElements =
     props.postData.map(post => <Post message={post.post} likes={post.likes} id={post.id} />)
 
-  let newPostElement = React.createRef() //создает ссылку на объект
+  let newPostElement = React.createRef() //создает ссылку на объект 
 
   let addPost = () => {
     let text = newPostElement.current.value
     props.addPost(text)
-    newPostElement.current.value = ''
+    props.updatePostText('')
   }
   // создает функцию, которая выводит в алерт текущее значение из текстэреа
+
+  let onTextChange = () => {
+    let newText = newPostElement.current.value
+    props.updatePostText(newText)
+  }
+  // позволяет изменить строго заданное содержимое текстэреа
+
 
   return <div className={classes.wrapper}>
     <img src={ava} alt='ava' />
     <div className={classes.posts}>
-      <textarea ref={newPostElement} rows='5' cols='35' className={classes.newPostEnter}></textarea>
+      <textarea rows='5' cols='35' 
+          ref={newPostElement}  
+          className={classes.newPostEnter} 
+          value={props.newPostText}
+          onChange={onTextChange}  
+          />
       <div>
         <button onClick={addPost} className={classes.button}>Post</button>
       </div>
