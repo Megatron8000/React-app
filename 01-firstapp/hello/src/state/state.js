@@ -2,9 +2,8 @@ import React from 'react';
 import Quagmire from './Quagmire.jpg'
 import Brian from './Brian.jpg'
 import Peter from './Peter.jpeg'
-import { rerenderEntireTree } from '../render'
 
-
+ 
 
 //черновик под фотки
 
@@ -13,7 +12,11 @@ const peter  = <img src={Peter} alt='Peter' />
 const quagmire  = <img src={Quagmire} alt='Brian' />
 
 
+let rerenderEntireTree = () => {
+    
+}
 
+// локальный перерисовщик UI, параметры функции subscriber
 
 let state = {
 
@@ -59,7 +62,7 @@ let state = {
  
 }
 
-export let addPost = (postMessage) => {
+export const addPost = (postMessage) => {
     let newPost = {
         id: 5,
         post: postMessage,
@@ -69,9 +72,16 @@ export let addPost = (postMessage) => {
     rerenderEntireTree(state)
 }
 
-export let updatePostText = (newText) => {
+export const updatePostText = (newText) => {
     state.profilePage.newPostText = newText
     rerenderEntireTree(state)
 }
+
+// addPost, updatePostText - коллбэки, вызываемые на UI и изменяющие state
+
+export const subscriber = (observer) => {
+    rerenderEntireTree = observer
+} 
+//коллбек внешней функции, перерисовывающей ui при изменении state
 
 export default state
