@@ -16,7 +16,7 @@ let rerenderEntireTree = () => {
     
 }
 
-// локальный перерисовщик UI, параметры функции subscriber
+// локальный перерисовщик UI, параметры функция subscriber
 
 let state = {
 
@@ -82,6 +82,6 @@ export const updatePostText = (newText) => {
 export const subscriber = (observer) => {
     rerenderEntireTree = observer
 } 
-//коллбек внешней функции, перерисовывающей ui при изменении state
+//коллбэк внешней функции, перерисовывающая ui при изменении state
 
 export default state
