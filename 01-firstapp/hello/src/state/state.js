@@ -84,4 +84,5 @@ export const subscriber = (observer) => {
 } 
 //коллбэк внешней функции, перерисовывающая ui при изменении state
 
+
 export default state
