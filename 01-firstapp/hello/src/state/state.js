@@ -72,6 +72,7 @@ export const addPost = (postMessage) => {
     rerenderEntireTree(state)
 }
 
+
 export const updatePostText = (newText) => {
     state.profilePage.newPostText = newText
     rerenderEntireTree(state)
