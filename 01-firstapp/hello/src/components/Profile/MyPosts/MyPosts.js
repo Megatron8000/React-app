@@ -15,7 +15,7 @@ const MyPosts = (props) => {
     props.addPost(text)
     props.updatePostText('')
   }
-  // создает функцию, которая выводит в алерт текущее значение из текстэреа
+  // создает функцию, которая создает новый объект типа пост
 
   let onTextChange = () => {
     let newText = newPostElement.current.value
