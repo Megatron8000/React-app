@@ -1,25 +1,25 @@
 import * as serviceWorker from './serviceWorker';
-import state, { subscriber } from './state/state';
+import store from './state/state';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {addPost} from './state/state.js';
-import {updatePostText} from './state/state.js';
+
 
 
 
 let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
-          <App state={state} addPost={addPost} updatePostText={updatePostText}/>
+          <App state={store.getState()} addPost={store.addPost.bind(store)} 
+          updatePostText={store.updatePostText.bind(store)}/>
         </React.StrictMode>,
         document.getElementById('root')
       );
 }
 
-rerenderEntireTree(state)
-subscriber(rerenderEntireTree) // в функицю из state приходит функция, перерисовывающая страницы при изменении state 
+rerenderEntireTree(store.getState())
+store.subscriber(rerenderEntireTree) // в функицю из state приходит функция, перерисовывающая страницы при изменении state 
 
 
 // If you want your app to work offline and load faster, you can change

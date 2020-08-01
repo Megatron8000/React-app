@@ -15,7 +15,7 @@ const MyPosts = (props) => {
     props.addPost(text)
     props.updatePostText('')
   }
-  // создает функцию, которая создает новый объект типа пост
+  // создает функцию, которая создает новый объект пост
 
   let onTextChange = () => {
     let newText = newPostElement.current.value
