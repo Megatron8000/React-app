@@ -60,7 +60,7 @@ import Peter from './Peter.jpeg'
         return this._state
     },
 
-    rerenderEntireTree  () {
+    _callSubscriber  () {
         
     },
     // локальный перерисовщик UI, параметры функция subscriber
@@ -73,19 +73,19 @@ import Peter from './Peter.jpeg'
             likes: 0
         }
         this._state.profilePage.postData.push(newPost)
-        this.rerenderEntireTree(this._state)
+        this._callSubscriber(this._state)
     },
     
     
     updatePostText (newText)  {
         this._state.profilePage.newPostText = newText
-        this.rerenderEntireTree(this._state)
+        this._callSubscriber(this._state)
     },
     
     // addPost, updatePostText - коллбэки, вызываемые на UI и изменяющие state
     
     subscriber (observer)  {
-        this.rerenderEntireTree = observer
+        this._callSubscriber = observer
     } 
     //коллбэк внешней функции, перерисовывающая ui при изменении state
     

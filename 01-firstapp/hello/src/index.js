@@ -8,7 +8,7 @@ import App from './App';
 
 
 
-let rerenderEntireTree = (state) => {
+let rerenderEntireTree = () => {
     ReactDOM.render(
         <React.StrictMode>
           <App state={store.getState()} addPost={store.addPost.bind(store)} 
