@@ -11,8 +11,6 @@ import { Route, BrowserRouter } from 'react-router-dom';
 
 
 
-
-
 const App = (props) => {
 
   return (
