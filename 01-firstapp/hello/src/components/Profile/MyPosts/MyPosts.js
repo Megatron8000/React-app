@@ -11,15 +11,13 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef() //создает ссылку на объект 
 
   let addPost = () => {
-    let text = newPostElement.current.value
-    props.addPost(text)
-    props.updatePostText('')
+    props.dispatch({ type: 'ADD-POST' })
   }
   // создает функцию, которая создает новый объект пост
 
   let onTextChange = () => {
-    let newText = newPostElement.current.value
-    props.updatePostText(newText)
+    let text = newPostElement.current.value
+    props.dispatch({ type: 'UPDATE-NEW-POST-TEXT', newText: text })
   }
   // позволяет изменить строго заданное содержимое текстэреа
 
@@ -27,12 +25,12 @@ const MyPosts = (props) => {
   return <div className={classes.wrapper}>
     <img src={ava} alt='ava' />
     <div className={classes.posts}>
-      <textarea rows='5' cols='35' 
-          ref={newPostElement}  
-          className={classes.newPostEnter} 
-          value={props.newPostText}
-          onChange={onTextChange}  
-          />
+      <textarea rows='5' cols='35'
+        ref={newPostElement}
+        className={classes.newPostEnter}
+        value={props.newPostText}
+        onChange={onTextChange}
+      />
       <div>
         <button onClick={addPost} className={classes.button}>Post</button>
       </div>

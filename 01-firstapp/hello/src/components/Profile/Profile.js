@@ -15,12 +15,11 @@ const Profile = (props) => {
       <Avatar />
       <Description />
     </div>
-    <MyPosts 
-        postData= {props.postData}  
-        addPost= {props.addPost} 
-        newPostText= {props.newPostText}
-        updatePostText= {props.updatePostText}  
-        />
+    <MyPosts
+      postData={props.postData}
+      newPostText={props.newPostText}
+      dispatch={props.dispatch}
+    />
   </div>
 }
 
