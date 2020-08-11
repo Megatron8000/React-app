@@ -3,6 +3,10 @@ import Quagmire from './Quagmire.jpg'
 import Brian from './Brian.jpg'
 import Peter from './Peter.jpeg'
 
+const ADD_POST = 'ADD-POST'
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
+
+
 let store = {
     //черновик под фотки
 
@@ -71,7 +75,7 @@ let store = {
     //коллбэк внешней функции, перерисовывающая ui при изменении state
 
     dispatch(action) {
-        if (action.type === 'ADD-POST') { // экшн должен иметь свойство type
+        if (action.type === ADD_POST) { // экшн должен иметь свойство type
             let newPost = {
                 id: 5,
                 post: this._state.profilePage.newPostText,
@@ -80,13 +84,25 @@ let store = {
             this._state.profilePage.postData.push(newPost)
             this._state.profilePage.newPostText = ''
             this._callSubscriber(this._state)
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+        } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._state.profilePage.newPostText = action.newText
             this._callSubscriber(this._state)
         }
-    }
+    }   
 }
 
+export const addPostActionCreator = () => {   //создает экшн для добавления поста
+    return {
+      type: ADD_POST
+    }
+  }
+  
+export const updateNewPostTextActionCreator = (text) => { //создает экшн для обновления текста в текстэреа
+    return {
+      type: UPDATE_NEW_POST_TEXT, newText: text
+    }
+  }
+ 
 
 
 export default store
