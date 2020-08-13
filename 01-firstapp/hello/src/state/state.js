@@ -74,6 +74,8 @@ let store = {
     },
     //коллбэк внешней функции, перерисовывающая ui при изменении state
 
+
+    
     dispatch(action) {
         if (action.type === ADD_POST) { // экшн должен иметь свойство type
             let newPost = {
