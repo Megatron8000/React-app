@@ -8,7 +8,7 @@ import News from './components/News/News';
 import Settings from './components/Settings/Settings';
 import Music from './components/Music/Music';
 import { Route, BrowserRouter } from 'react-router-dom';
-
+import store from './state/state';
 
 const App = (props) => {
 
@@ -24,9 +24,10 @@ const App = (props) => {
               newPostText={props.state.profilePage.newPostText}
               dispatch={props.dispatch} />} />
           <Route path='/dialogs' render={() => <Dialogs
+            store = {store}
+            dispatch = {props.dispatch}
             dialogsData={props.state.dialogsPage.dialogsData}
             messagesData={props.state.dialogsPage.messagesData}
-            answersData={props.state.dialogsPage.answersData}
           />} />
           <Route path='/news' render={() => <News />} />
           <Route path='/music' render={() => <Music />} />

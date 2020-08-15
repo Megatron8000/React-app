@@ -5,7 +5,8 @@ import Peter from './Peter.jpeg'
 
 const ADD_POST = 'ADD-POST'
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
-
+const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
+const SEND_MESSAGE = 'SEND-MESSAGE'
 
 let store = {
     //черновик под фотки
@@ -35,10 +36,7 @@ let store = {
                 { id: 3, message: 'Think different' }
             ],
 
-            answersData: [
-                { id: 1, answer: 'Thank You!' },
-            ]
-
+            newMessageText: ""
         },
 
         profilePage: {   //объект хранящий данные для страницы профиля
@@ -89,6 +87,14 @@ let store = {
         } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._state.profilePage.newPostText = action.newText
             this._callSubscriber(this._state)
+        } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) { 
+            this._state.dialogsPage.newMessageText = action.newMessage
+            this._callSubscriber(this._state)
+        } else if (action.type === SEND_MESSAGE) {
+            let newMessage = this._state.dialogsPage.newMessageText
+            this._state.dialogsPage.newMessageText = ''
+            this._state.dialogsPage.messagesData.push({id:4, message: newMessage })
+            this._callSubscriber(this._state)
         }
     }   
 }
@@ -98,12 +104,24 @@ export const addPostActionCreator = () => {   //создает экшн для �
       type: ADD_POST
     }
   }
-  
 export const updateNewPostTextActionCreator = (text) => { //создает экшн для обновления текста в текстэреа
     return {
       type: UPDATE_NEW_POST_TEXT, newText: text
     }
   }
+ 
+export const updateNewMessageTextActionCreator = (text) => {
+    return {
+        type: UPDATE_NEW_MESSAGE_TEXT, newMessage: text
+    }
+}  
+
+export const updateSendMessageActionCreator = () => {
+    return {
+        type: SEND_MESSAGE
+    }
+}  
+
  
 
 

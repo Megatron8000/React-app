@@ -2,8 +2,7 @@ import React from 'react';
 import classes from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
-import Answer from './Answer/Answer';
-
+import { updateNewMessageTextActionCreator, updateSendMessageActionCreator } from '../../state/state';
 
 
 const Dialogs = (props) => {
@@ -14,12 +13,16 @@ const Dialogs = (props) => {
     let messagesElements =
         props.messagesData.map(message => <Message message={message.message} id={message.id} />)
 
-    let answerElements =
-        props.answersData.map(answer => <Answer answer={answer.answer} id={answer.id} />)
+    let newMessageText = props.store.newMessageText  
 
-    let addNewAnswer = React.createRef()
-
-    let addAnswer = () => { let answer = addNewAnswer.current.value; alert(answer) }
+    let onNewMessageChange = (event) => {
+       let text = event.target.value
+       props.store.dispatch(updateNewMessageTextActionCreator(text))
+    } 
+    
+    let onSendMessageClick = () => {
+        props.store.dispatch(updateSendMessageActionCreator())
+    }
 
     return (
         <div className={classes.dialogs}>
@@ -28,12 +31,15 @@ const Dialogs = (props) => {
             </div>
             <div className={classes.messages}>
                 {messagesElements}
-                {answerElements}
+                
                 <div className={classes.answerContainer}>
-                    <textarea ref={addNewAnswer} className={classes.answerEnterArea}></textarea>
+                    <textarea value={newMessageText} 
+                              onChange= {onNewMessageChange}
+                              className={classes.answerEnterArea}>
+                    </textarea>
                 </div>
                 <div>
-                    <button onClick={addAnswer} className={classes.button}>Send!</button>
+                    <button onClick={onSendMessageClick} className={classes.button}>Send!</button>
                 </div>
             </div>
         </div>
