@@ -2,6 +2,8 @@ import React from 'react'
 import Quagmire from './Quagmire.jpg'
 import Brian from './Brian.jpg'
 import Peter from './Peter.jpeg'
+import profileReducer from './profile-reducer'
+import dialogsReducer from './dialogs-reducer'
 
 const ADD_POST = 'ADD-POST'
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
@@ -75,27 +77,11 @@ let store = {
 
     
     dispatch(action) {
-        if (action.type === ADD_POST) { // экшн должен иметь свойство type
-            let newPost = {
-                id: 5,
-                post: this._state.profilePage.newPostText,
-                likes: 0
-            }
-            this._state.profilePage.postData.push(newPost)
-            this._state.profilePage.newPostText = ''
-            this._callSubscriber(this._state)
-        } else if (action.type === UPDATE_NEW_POST_TEXT) {
-            this._state.profilePage.newPostText = action.newText
-            this._callSubscriber(this._state)
-        } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) { 
-            this._state.dialogsPage.newMessageText = action.newMessage
-            this._callSubscriber(this._state)
-        } else if (action.type === SEND_MESSAGE) {
-            let newMessage = this._state.dialogsPage.newMessageText
-            this._state.dialogsPage.newMessageText = ''
-            this._state.dialogsPage.messagesData.push({id:4, message: newMessage })
-            this._callSubscriber(this._state)
-        }
+
+        this._state.profilePage = profileReducer(this._state.profilePage, action)
+        this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action)
+
+        this._callSubscriber(this._state)
     }   
 }
 
