@@ -85,7 +85,6 @@ let store = {
     }   
 }
 
-
 export const addPostActionCreator = () => {   //создает экшн для добавления поста
     return {
       type: ADD_POST
