@@ -1,22 +1,7 @@
-import React from 'react'
-import Quagmire from './Quagmire.jpg'
-import Brian from './Brian.jpg'
-import Peter from './Peter.jpeg'
 import profileReducer from './profile-reducer'
 import dialogsReducer from './dialogs-reducer'
 
-const ADD_POST = 'ADD-POST'
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
-const SEND_MESSAGE = 'SEND-MESSAGE'
-
 let store = {
-    //черновик под фотки
-
-    brian: <img src={Brian} alt='Brian' />,
-    peter: <img src={Peter} alt='Peter' />,
-    quagmire: <img src={Quagmire} alt='Brian' />,
-
 
 
     _state: {
@@ -52,12 +37,6 @@ let store = {
 
         },
 
-        // avatars: [
-        //     {id: 1, value: this.brian},
-        //     {id: 2, value: this.peter},
-        //     {id: 3, value: this.quagmire}
-        // ]
-
     },
 
     _callSubscriber() {
@@ -84,31 +63,6 @@ let store = {
         this._callSubscriber(this._state)
     }   
 }
-
-export const addPostActionCreator = () => {   //создает экшн для добавления поста
-    return {
-      type: ADD_POST
-    }
-  }
-export const updateNewPostTextActionCreator = (text) => { //создает экшн для обновления текста в текстэреа
-    return {
-      type: UPDATE_NEW_POST_TEXT, newText: text
-    }
-  }
- 
-export const updateNewMessageTextActionCreator = (text) => {
-    return {
-        type: UPDATE_NEW_MESSAGE_TEXT, newMessage: text
-    }
-}  
-
-export const updateSendMessageActionCreator = () => {
-    return {
-        type: SEND_MESSAGE
-    }
-}  
-
- 
 
 
 export default store

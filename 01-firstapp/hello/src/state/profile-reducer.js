@@ -24,11 +24,15 @@ const profileReducer = (state, action) => {
 
 }
 
-
-
-
-
-
-
+export const addPostActionCreator = () => {   //создает экшн для добавления поста
+    return {
+        type: ADD_POST
+    }
+}
+export const updateNewPostTextActionCreator = (text) => { //создает экшн для обновления текста в текстэреа
+    return {
+        type: UPDATE_NEW_POST_TEXT, newText: text
+    }
+}
 
 export default profileReducer

@@ -6,8 +6,6 @@ import './index.css';
 import App from './App';
 
 
-
-
 let rerenderEntireTree = () => {
   ReactDOM.render(
     <React.StrictMode>

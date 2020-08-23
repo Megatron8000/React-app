@@ -2,7 +2,8 @@ import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 import ava from './ava.png';
-import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../state/state';
+import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../state/profile-reducer';
+
 
 
 
