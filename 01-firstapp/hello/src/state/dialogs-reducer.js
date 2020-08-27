@@ -1,7 +1,6 @@
 const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT'
 const SEND_MESSAGE = 'SEND-MESSAGE'
 
-
 const dialogsReducer = (state, action) => {
 
     switch (action.type) {
