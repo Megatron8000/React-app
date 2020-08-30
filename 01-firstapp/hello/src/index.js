@@ -16,7 +16,7 @@ let rerenderEntireTree = () => {
 }
 
 rerenderEntireTree(store.getState())
-store.subscriber(rerenderEntireTree) // в функицю из state приходит функция, перерисовывающая страницы при изменении state 
+store.subscriber((rerenderEntireTree)) // в функицю из state приходит функция, перерисовывающая страницы при изменении state 
 
 
 // If you want your app to work offline and load faster, you can change
