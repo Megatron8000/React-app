@@ -6,22 +6,26 @@ import { updateNewMessageTextActionCreator, updateSendMessageActionCreator } fro
 
 const Dialogs = (props) => {
 
+   //let state = props.store.getState().dialogsPage
+
     let dialogElements =
         props.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />)
 
     let messagesElements =
         props.messagesData.map(message => <Message message={message.message} id={message.id} />)
 
-    let newMessageText = props.store.newMessageText  
+    let newMessageText = props.newMessageText  
+
+    let onSendMessageClick = () => {
+        props.dispatch(updateSendMessageActionCreator())
+    }
 
     let onNewMessageChange = (event) => {
        let text = event.target.value
-       props.store.dispatch(updateNewMessageTextActionCreator(text))
+       props.dispatch(updateNewMessageTextActionCreator(text))
     } 
     
-    let onSendMessageClick = () => {
-        props.store.dispatch(updateSendMessageActionCreator())
-    }
+ 
 
     return (
         <div className={classes.dialogs}>
