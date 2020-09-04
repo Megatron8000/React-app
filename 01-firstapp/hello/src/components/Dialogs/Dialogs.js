@@ -25,8 +25,6 @@ const Dialogs = (props) => {
        props.dispatch(updateNewMessageTextActionCreator(text))
     } 
     
- 
-
     return (
         <div className={classes.dialogs}>
             <div className={classes.dialogsItems}>

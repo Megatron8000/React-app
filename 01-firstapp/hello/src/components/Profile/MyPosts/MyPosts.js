@@ -4,10 +4,6 @@ import Post from './Post/Post';
 import ava from './ava.png';
 import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../state/profile-reducer';
 
-
-
-
-
 const MyPosts = (props) => {
 
   let postElements =
@@ -25,7 +21,6 @@ const MyPosts = (props) => {
     props.dispatch(updateNewPostTextActionCreator(text))
   }
   // позволяет изменить строго заданное содержимое текстэреа
-
 
   return <div className={classes.wrapper}>
     <img src={ava} alt='ava' />
@@ -48,7 +43,5 @@ const MyPosts = (props) => {
   </div>
 
 }
-
-
 
 export default MyPosts
