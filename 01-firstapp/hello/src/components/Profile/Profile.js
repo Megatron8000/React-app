@@ -5,8 +5,6 @@ import MyPosts from './MyPosts/MyPosts';
 import Avatar from './UserInfo/Avatar';
 import Description from './UserInfo/Description';
 
-
-
 const Profile = (props) => {
 
   return <div>
@@ -22,6 +20,5 @@ const Profile = (props) => {
     />
   </div>
 }
-
 
 export default Profile
