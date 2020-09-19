@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 import ava from './ava.png';
-import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../state/profile-reducer';
+
 
 const MyPosts = (props) => {
 
@@ -11,16 +11,14 @@ const MyPosts = (props) => {
 
   let newPostElement = React.createRef() //создает ссылку на объект 
 
-  let addPost = () => {
-    props.dispatch(addPostActionCreator())
+  let onAddPost = () => {
+    props.addPost()
   }
-  // создает функцию, которая создает новый объект пост
-
+  
   let onTextChange = () => {
     let text = newPostElement.current.value
-    props.dispatch(updateNewPostTextActionCreator(text))
+    props.updateNewPostText(text)
   }
-  // позволяет изменить строго заданное содержимое текстэреа
 
   return <div className={classes.wrapper}>
     <img src={ava} alt='ava' />
@@ -32,7 +30,7 @@ const MyPosts = (props) => {
         onChange={onTextChange}
       />
       <div>
-        <button onClick={addPost} className={classes.button}>Post</button>
+        <button onClick={onAddPost} className={classes.button}>Post</button>
       </div>
       <br /><br /><br />
       <div className={classes.tape}>
