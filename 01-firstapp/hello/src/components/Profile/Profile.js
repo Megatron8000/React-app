@@ -14,7 +14,6 @@ const Profile = (props) => {
       <Description />
     </div>
     <MyPostsContainer
-      
       postData={props.postData}
       newPostText={props.newPostText}
       dispatch={props.dispatch}
