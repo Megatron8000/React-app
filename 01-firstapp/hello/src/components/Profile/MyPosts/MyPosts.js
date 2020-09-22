@@ -9,7 +9,7 @@ const MyPosts = (props) => {
   let postElements =
     props.postData.map(post => <Post message={post.post} likes={post.likes} id={post.id} />)
 
-  let newPostElement = React.createRef() //создает ссылку на объект 
+  let newPostElement = React.createRef() 
 
   let onAddPost = () => {
     props.addPost()
