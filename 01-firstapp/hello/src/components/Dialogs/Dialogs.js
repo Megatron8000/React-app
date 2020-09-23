@@ -15,13 +15,11 @@ const Dialogs = (props) => {
 
     let onSendMessageClick = () => {
             props.sendMessage()
-        //props.dispatch(updateSendMessageActionCreator())
     }
 
     let onNewMessageChange = (event) => {
        let text = event.target.value
        props.updateNewMessageText(text)
-       //props.dispatch(updateNewMessageTextActionCreator(text))
     } 
     
     return (
