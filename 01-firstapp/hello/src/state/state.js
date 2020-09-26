@@ -42,7 +42,7 @@ let store = {
     _callSubscriber() {
 
     },
-    // локальный перерисовщик UI, параметры функция subscriber
+
 
     getState() {
         return this._state
@@ -51,7 +51,7 @@ let store = {
     subscriber(observer) {
         this._callSubscriber = observer
     },
-    //коллбэк внешней функции, перерисовывающая ui при изменении state
+  
 
 
     
