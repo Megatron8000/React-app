@@ -6,20 +6,20 @@ import Message from './Message/Message';
 const Dialogs = (props) => {
 
     let dialogElements =
-        props.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />)
+        props.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />) //маппит собеседников
 
     let messagesElements =
-        props.messagesData.map(message => <Message message={message.message} id={message.id} />)
+        props.messagesData.map(message => <Message message={message.message} id={message.id} />) //маппит сообщения
 
-    let newMessageText = props.newMessageText  
+    let newMessageText = props.newMessageText  // указывает начальное значение в текстэреа
 
     let onSendMessageClick = () => {
-            props.sendMessage()
+            props.sendMessage() // добавляет сообщение-ответ
     }
 
     let onNewMessageChange = (event) => {
        let text = event.target.value
-       props.updateNewMessageText(text)
+       props.updateNewMessageText(text) // обновляет значение в поле ввода ответа и записывает в стейт
     } 
     
     return (
