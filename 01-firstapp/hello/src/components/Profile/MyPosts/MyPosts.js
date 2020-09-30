@@ -7,17 +7,17 @@ import ava from './ava.png';
 const MyPosts = (props) => {
 
   let postElements =
-    props.postData.map(post => <Post message={post.post} likes={post.likes} id={post.id} />)
+    props.postData.map(post => <Post message={post.post} likes={post.likes} id={post.id} />) //маппинг постов из начального стейта
 
-  let newPostElement = React.createRef() 
+  let newPostElement = React.createRef() //создает ссылку на новый элемент
 
   let onAddPost = () => {
-    props.addPost()
+    props.addPost() // добавляет новый пост
   }
   
   let onTextChange = () => {
     let text = newPostElement.current.value
-    props.updateNewPostText(text)
+    props.updateNewPostText(text) //записывает в стейт новое значение в тектэреа
   }
 
   return <div className={classes.wrapper}>
