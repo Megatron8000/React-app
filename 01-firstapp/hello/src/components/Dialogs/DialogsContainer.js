@@ -5,10 +5,10 @@ import Dialogs from './Dialogs';
 const DialogsContainer = (props) => { 
     
     let onSendMessageClick = () => {
-        props.dispatch(updateSendMessageActionCreator())
+        props.dispatch(updateSendMessageActionCreator()) // записывает значение текстэреа в стейт
     }
     let onNewMessageChange = (text) => {
-        props.dispatch(updateNewMessageTextActionCreator(text))
+        props.dispatch(updateNewMessageTextActionCreator(text)) //добавляет новое сообщение
     }
     return (<Dialogs
         updateNewMessageText={onNewMessageChange}
