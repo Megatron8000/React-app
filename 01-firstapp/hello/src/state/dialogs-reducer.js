@@ -47,5 +47,4 @@ export const updateSendMessageActionCreator = () => {
         type: SEND_MESSAGE
     }
 }  
-
 export default dialogsReducer
